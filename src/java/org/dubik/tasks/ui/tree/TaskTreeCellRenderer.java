@@ -109,7 +109,7 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
         long actual = task.getActualTime();
         if (totalTasks == 0) {
             if (settings.isEnableActualTime()) {
-                if (estimated != 0 || actual != 0) {
+                if (estimated != 0) {
                     details.append("(");
                     details.append(makeStringFromTime(actual));
 
