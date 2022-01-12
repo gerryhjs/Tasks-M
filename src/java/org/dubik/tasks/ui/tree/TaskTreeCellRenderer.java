@@ -184,8 +184,8 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
 
     private String makeStringFromTime(long seconds) {
         int inMinutes = (int) (seconds / 60);
-        int hours = 0;
-        int minutes = inMinutes;
+        int hours = inMinutes / 60;
+        int minutes = inMinutes % 60;
 
         StringBuilder timeStr = new StringBuilder();
 
@@ -193,10 +193,10 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
             timeStr.append(Integer.toString(hours));
             timeStr.append("h");
         }
-
-        timeStr.append(Integer.toString(minutes));
-        timeStr.append("m");
-
+        if (minutes != 0) {
+            timeStr.append(Integer.toString(minutes));
+            timeStr.append("m");
+        }
         return timeStr.toString();
     }
 
