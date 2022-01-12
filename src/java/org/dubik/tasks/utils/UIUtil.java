@@ -100,8 +100,8 @@ public class UIUtil {
                 return getIcon(ICON_DEFAULT_PRIORITY);
             case Important:
                 return getIcon(ICON_IMPORTANT_PRIORITY);
-            case Questionable:
-                return getIcon(ICON_QUESTION_PRIORITY);
+//            case Questionable:
+//                return getIcon(ICON_QUESTION_PRIORITY);
             default:
                 return getIcon(ICON_DEFAULT_PRIORITY);
         }
