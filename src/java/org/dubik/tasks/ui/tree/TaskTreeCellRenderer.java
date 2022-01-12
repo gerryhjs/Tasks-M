@@ -190,7 +190,7 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
             timeStr.append(Integer.toString(hours));
             timeStr.append("h");
         }
-        if ((minutes != 0) && (hours != 0)) {
+        if ((minutes != 0) || (hours == 0)) {
             timeStr.append(Integer.toString(minutes));
             timeStr.append("m");
         }
