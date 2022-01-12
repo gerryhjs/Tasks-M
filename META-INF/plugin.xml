@@ -126,7 +126,7 @@
         <group id="TasksActionGroup">
             <reference ref="AddNewTask"/>
             <reference ref="RemoveTaskAction"/>
-            <!--<reference ref="TaskPropertyAction"/>\-->
+            <reference ref="TaskPropertyAction"/>
             <reference ref="MoveTaskUpAction"/>
             <reference ref="MoveTaskDownAction"/>
             <separator/>
@@ -151,9 +151,10 @@
             <!--<reference ref="ToggleCompletedTaskVisibleAction"/>
             <separator/>
             <reference ref="HighlightTaskAction"/>
-            <reference ref="TaskGroupByPriority"/>-->
+            <reference ref="TaskGroupByPriority"/>
             <separator/>
             <reference ref="TaskPropertyAction"/>
+            <reference ref="RemoveTaskAction"/>-->
         </group>
 
         <group id="TasksAdditionalToolBarGroup">
