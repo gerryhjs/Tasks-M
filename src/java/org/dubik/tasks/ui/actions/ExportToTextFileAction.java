@@ -39,25 +39,7 @@ public class ExportToTextFileAction extends BaseTaskAction {
 
         OutputStream os = new ByteArrayOutputStream();
         writeTasks(model, os);
-
-        form.show();
-        if (form.getExitCode() == DialogWrapper.OK_EXIT_CODE) {
-            if (!form.isExportToClipboard()) {
-                File file = form.getFile();
-                if (file.exists()) {
-                    if (JOptionPane.showConfirmDialog(null, TasksBundle.message("export.overwrite"),
-                                                      TasksBundle.message("export.overwrite.title"), JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-                        writeTasks(file, os.toString());
-                    }
-                }
-                else {
-                    writeTasks(file, os.toString());
-                }
-            }
-            else {
-                new TextTransfer().setClipboardContent(os.toString());
-            }
-        }
+        new TextTransfer().setClipboardContent(os.toString());
     }
 
     private void writeTasks(File file, String text) {

@@ -43,9 +43,11 @@ public class ExportToFileForm extends DialogWrapper {
 
         this.project = project;
 
-        setTitle(TasksBundle.message("form.export.title"));
-        init();
-        setSize(640, 580);
+//        setTitle(TasksBundle.message("form.export.title"));
+//        init();
+//        setSize(640, 200);
+        exportToClipboard();
+        close(OK_EXIT_CODE);
     }
 
     private void createUIComponents() {

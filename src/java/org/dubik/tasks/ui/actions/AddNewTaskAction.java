@@ -38,7 +38,7 @@ public class AddNewTaskAction extends BaseTaskAction {
     public void actionPerformed(Project project, String title) {
         TaskController controller = getController(project);
 
-        TaskForm newTaskForm = new TaskForm(project, getSettings(), false );
+        TaskForm newTaskForm = new TaskForm(project, getSettings(), true );
         newTaskForm.setTaskTitle(title);
         newTaskForm.setTaskDescription(null);
         newTaskForm.setActualsVisible(false);
@@ -48,7 +48,7 @@ public class AddNewTaskAction extends BaseTaskAction {
         newTaskForm.show();
         int exitCode = newTaskForm.getExitCode();
 
-        if (exitCode == TaskForm.EXIT_ADD_TO_ROOT || exitCode == TaskForm.EXIT_ADD) {
+        if (exitCode == TaskForm.EXIT_ADD_TO_ROOT || exitCode == TaskForm.EXIT_ADD || exitCode == TaskForm.OK_EXIT_CODE) {
             ITask task = new TaskBuilder()
                     .setTitle(newTaskForm.getTaskTitle())
                     .setDescription(newTaskForm.getTaskDescription())
@@ -57,7 +57,7 @@ public class AddNewTaskAction extends BaseTaskAction {
                     .build();
 
             ITask parent = null;
-            if (exitCode == TaskForm.EXIT_ADD && newTaskForm.getSelectedParent() != controller.getDummyRootTaskInstance()) {
+            if (newTaskForm.getSelectedParent() != controller.getDummyRootTaskInstance()) {
                 parent = newTaskForm.getSelectedParent();
             }
 
