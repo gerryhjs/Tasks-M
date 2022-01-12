@@ -152,8 +152,8 @@
             <separator/>
             <reference ref="HighlightTaskAction"/>
             <reference ref="TaskGroupByPriority"/>
-            <separator/>-->
-            <reference ref="TaskPropertyAction"/>
+            <separator/>
+            <reference ref="TaskPropertyAction"/>-->
         </group>
 
         <group id="TasksAdditionalToolBarGroup">
