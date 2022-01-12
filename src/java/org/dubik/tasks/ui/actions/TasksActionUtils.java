@@ -44,16 +44,16 @@ class TasksActionUtils {
     static void preselectParentTask(TaskController controller, TaskForm form) {
         List<ITask> allTasks = controller.getAllTasks();
         List<ITask> selectedTasks = controller.getSelectedTasks();
-//        if (selectedTasks.size()== 1 && !(selectedTasks.get(0) instanceof ITaskGroup)) {
-//            ITask selectedTask = selectedTasks.get(0);
-//            List<ITask> subTasks = controller.getSubTasks(selectedTask);
-//            subTasks.remove(selectedTask);
-//            allTasks.removeAll(subTasks);
-//            form.setSelectedParentTask(selectedTask);
-//        }
-//        else {
-//            form.setSelectedParentTask(controller.getDummyRootTaskInstance());
-//        }
+        if (selectedTasks.size()== 1 && !(selectedTasks.get(0) instanceof ITaskGroup)) {
+            ITask selectedTask = selectedTasks.get(0);
+            List<ITask> subTasks = controller.getSubTasks(selectedTask);
+            subTasks.remove(selectedTask);
+            allTasks.removeAll(subTasks);
+            form.setSelectedParentTask(selectedTask);
+        }
+        else {
+            form.setSelectedParentTask(controller.getDummyRootTaskInstance());
+        }
         form.setSelectedParentTask(controller.getDummyRootTaskInstance());
         List<ITask> parentTasks = new ArrayList<ITask>(allTasks);
         form.setParentTasksList(controller.getDummyRootTaskInstance(), parentTasks);
