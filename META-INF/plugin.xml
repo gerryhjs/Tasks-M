@@ -137,10 +137,10 @@
             <reference ref="CollapseAllTasks"/>
             <separator/>
             <reference ref="ExportToTextFileAction"/>
-            <!--<reference ref="NewChangelistAction"/>-->
+            <!--<reference ref="NewChangelistAction"/>
             <separator/>
             <reference ref="StartTaskAction"/>
-            <reference ref="StopTaskAction"/>
+            <reference ref="StopTaskAction"/>-->
         </group>
 
         <group id="TasksPopupGroup">
@@ -151,9 +151,9 @@
             <!--<reference ref="ToggleCompletedTaskVisibleAction"/>
             <separator/>
             <reference ref="HighlightTaskAction"/>
-            <reference ref="TaskGroupByPriority"/>
+            <reference ref="TaskGroupByPriority"/>-->
             <separator/>
-            <reference ref="TaskPropertyAction"/>-->
+            <reference ref="TaskPropertyAction"/>
         </group>
 
         <group id="TasksAdditionalToolBarGroup">
