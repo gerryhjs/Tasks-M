@@ -46,6 +46,7 @@ public class TaskPropertyAction extends BaseTaskAction {
                 taskForm.setPriority(sTask.getPriority());
                 taskForm.setEstimatedTime(sTask.getEstimatedTime());
                 taskForm.setActualTime(sTask.getActualTime());
+                taskForm.setActualsVisible(false);
 
                 if (sTask.getParent() == null) {
                     taskForm.setSelectedParentTask(controller.getDummyRootTaskInstance());
