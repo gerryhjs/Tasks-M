@@ -113,15 +113,12 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
                     details.append("(");
                 }
 
-                if (actual != 0) {
                     details.append("");
                     details.append(makeStringFromTime(actual));
-                }
+
 
                 if (estimated != 0) {
-                    if (actual != 0) {
-                        details.append("/");
-                    }
+                    details.append("/");
                     details.append(makeStringFromTime(estimated));
                 }
 
@@ -144,7 +141,7 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
             details.append("(").append(totalTasks).append(" 任务完成: ").append(task.getCompletionRatio()).append("%");
 
 
-            if (settings.isEnableActualTime() && actual != 0) {
+            if (settings.isEnableActualTime()) {
                 details.append(", ").append(makeStringFromTime(actual));
             }
 
@@ -193,7 +190,7 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
             timeStr.append(Integer.toString(hours));
             timeStr.append("h");
         }
-        if (minutes != 0) {
+        if ((minutes != 0) && (hours != 0)) {
             timeStr.append(Integer.toString(minutes));
             timeStr.append("m");
         }
