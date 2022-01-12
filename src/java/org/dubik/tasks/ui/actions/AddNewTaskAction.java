@@ -37,15 +37,19 @@ public class AddNewTaskAction extends BaseTaskAction {
 
     public void actionPerformed(Project project, String title) {
         TaskController controller = getController(project);
+//        controller.setSelectedTasks(null);
 
         TaskForm newTaskForm = new TaskForm(project, getSettings(), true );
         newTaskForm.setTaskTitle(title);
         newTaskForm.setTaskDescription(null);
         newTaskForm.setActualsVisible(false);
+
+
         TasksActionUtils.preselectPriority(controller, newTaskForm);
         TasksActionUtils.preselectParentTask(controller, newTaskForm);
 
         newTaskForm.show();
+
         int exitCode = newTaskForm.getExitCode();
 
         if (exitCode == TaskForm.EXIT_ADD_TO_ROOT || exitCode == TaskForm.EXIT_ADD || exitCode == TaskForm.OK_EXIT_CODE) {
