@@ -135,12 +135,12 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
             details.append("(").append(totalTasks).append("个任务, 完成: ").append(task.getCompletionRatio()).append("%");
 
 
-            if (estimated != 0 || actual != 0) {
-                details.append(", ").append(makeStringFromTime(actual));
-                if (estimated != 0) {
-                    details.append("/").append(makeStringFromTime(estimated));
-                }
-            }
+//            if (estimated != 0 || actual != 0) {
+//                details.append(", ").append(makeStringFromTime(actual));
+//                if (estimated != 0) {
+//                    details.append("/").append(makeStringFromTime(estimated));
+//                }
+//            }
 
             details.append(")");
         }
