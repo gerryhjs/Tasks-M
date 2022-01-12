@@ -54,7 +54,7 @@ class TasksActionUtils {
         else {
             form.setSelectedParentTask(controller.getDummyRootTaskInstance());
         }
-        form.setSelectedParentTask(controller.getDummyRootTaskInstance());
+
         List<ITask> parentTasks = new ArrayList<ITask>(allTasks);
         form.setParentTasksList(controller.getDummyRootTaskInstance(), parentTasks);
     }
