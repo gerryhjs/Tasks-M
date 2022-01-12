@@ -43,7 +43,7 @@ public class UIUtil {
     public static final String ICON_BIG_TASK = "/org/dubik/tasks/ui/icons/bigTask.png";
     private static final String ICON_DEFAULT_PRIORITY = "/general/todoDefault.png";
     private static final String ICON_IMPORTANT_PRIORITY = "/general/todoImportant.png";
-    private static final String ICON_QUESTION_PRIORITY = "/org/dubik/tasks/ui/icons/lowPriority.png";
+    private static final String ICON_QUESTION_PRIORITY = "/general/todoDefault.png";
     private static final String ICON_STAR_RED = "/org/dubik/tasks/ui/icons/star_red.png";
     private static final String ICON_STAR_YELLOW = "/org/dubik/tasks/ui/icons/star_yellow.png";
     private static final String ICON_STAR_GREEN = "/org/dubik/tasks/ui/icons/star_green.png";

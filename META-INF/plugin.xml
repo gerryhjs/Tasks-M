@@ -82,7 +82,7 @@
     </change-notes>
     <version>100.0.0</version>
     <vendor email="nlsurfman@hotmail.com" url="https://github.com/NLSurfMan/tasks">
-        WarnerJan/HJS
+        HJS (Original author:WarnerJan Veldhuis)
     </vendor>
 
     <idea-version since-build="145.0"/>
