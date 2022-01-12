@@ -184,8 +184,8 @@ public class TaskTreeCellRenderer extends ColoredTreeCellRenderer {
 
     private String makeStringFromTime(long seconds) {
         int inMinutes = (int) (seconds / 60);
-        int hours = inMinutes / 60;
-        int minutes = inMinutes % 60;
+        int hours = 0;
+        int minutes = inMinutes;
 
         StringBuilder timeStr = new StringBuilder();
 
