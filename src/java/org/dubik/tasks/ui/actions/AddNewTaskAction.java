@@ -44,7 +44,6 @@ public class AddNewTaskAction extends BaseTaskAction {
         newTaskForm.setTaskDescription(null);
         newTaskForm.setActualsVisible(false);
 
-
         TasksActionUtils.preselectPriority(controller, newTaskForm);
         TasksActionUtils.preselectParentTask(controller, newTaskForm);
 
